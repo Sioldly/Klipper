@@ -1,6 +1,6 @@
 # Anycubic Kobra S1 Klipper Configuration Update
 
-This configuration has been battle-tested for over six months and has proven to be highly stable. This project documents the optimization process of the `printer.cfg` for the Anycubic Kobra S1 (S1C), primarily focusing on multi-material switching efficiency, print quality compensation, and hardware driver tuning.
+This configuration has been battle-tested for over six months and has proven to be highly stable. This project documents the optimization process of the `printer.cfg` for the Anycubic Kobra S1 Combo(S1C), primarily focusing on multi-material switching efficiency, print quality compensation, and hardware driver tuning.
 
 ## 🚀 Main Improvements
 * **Z-axis Noise**: Reduced excessive mechanical resonance during homing and movement.
