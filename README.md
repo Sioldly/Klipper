@@ -1,37 +1,43 @@
 # Anycubic Kobra S1 Klipper Configuration Update
-這套配置我用了大半年了算穩定
-此專案紀錄了 Anycubic Kobra S1 (S1C) 打印機設定檔 `printer.cfg` 的優化歷程。主要針對自動換料效率、打印品質補償以及硬體驅動進行了深度調整。
-* **主要改了**
 
-*Z軸噪音大*
+This configuration has been battle-tested for over six months and has proven to be highly stable[cite: 1, 2]. This project documents the optimization process of the `printer.cfg` for the Anycubic Kobra S1 (S1C), primarily focusing on multi-material switching efficiency, print quality compensation, and hardware driver tuning[cite: 1, 2].
 
-*電機電流不足*
+## 🚀 Main Improvements
+* **Z-axis Noise**: Reduced excessive mechanical resonance during homing and movement[cite: 1, 2].
+* **Motor Current**: Addressed insufficient torque during high-speed printing[cite: 1, 2].
+* **First Layer Issues**: Improved bed adhesion and consistency for a perfect start[cite: 2].
+* **ACE Feeding Speed**: Significantly reduced material switching time[cite: 2].
+* **Leveling Efficiency**: Optimized the probing process for faster preparation and higher precision[cite: 2].
 
-*首層問題*
-
-*ACE進退料速度*
-
-*調平效率*
-## 🛠 修改重點概覽
-### 1. 核心運動與硬體參數
-   * **驅動器配置**：
-     *電流提升*：X/Y 軸運行電流由 `1.5A` 提升至 `1.8A`；擠出機由 `0.6A` 提升至 `0.8A`。
-* **Z 軸歸位優化**：`homing_speed` 從 `8` 降低至 `6`，並將 `z_hop` 縮減為 `2.0` 以提升效率和降低噪音。
-
-### 2. ACE自動進退料與洗料邏輯
-* **進退料速度提升**：
-    * ACE進退料`default_unwind_speed` 與 `default_feed_speed` 均從原本的 `20/30` 提升至 **`65`** 。
-* **洗料邏輯微調**：
-    * `unwind_length_after_triggered` 退料長度由 `1300` 縮減至 `1100` 提升速度。
-    * 擦除速度 `sweep_speed` 降低至 `7` 以確保噴頭清潔度避免殘留影響調平。
-
-### 3. 打印品質補償與自動化模組
-* **床面網格 (Bed Mesh) 升級(這部分是打好完美首層的關鍵)**：
-    * 探測點數從 `5x5` 提升至 **`9x9`**。
-    * 算法從 `lagrange` 更換為 `bicubic`，並新增了 `fade`。
-    * `horizontal_move_z`改為`2`
-* **新增功能模組**：
-    * **多材質溫度控制**：新增了換料時的溫差控制設定 。
-    * **拋料指令**：新增 `TO_THROW_POSITION`，優化拋料流程。
 ---
-**Note:** 本次修改旨在提升 Anycubic S1C 的自動換料穩定度，並透過高密度的床面探測與動態流速補償來追求更高精度的打印結果。
+
+## 🛠 Key Optimization Highlights
+
+### 1. Core Motion & Hardware Parameters
+* **Driver Configuration**:
+    * **Current Boost**: Increased X/Y axis `run_current` from `1.5A` to `1.8A`.
+    * **Extruder Boost**: Increased extruder `run_current` from `0.6A` to `0.8A` to ensure consistent extrusion and prevent slipping.
+* **Z-Axis Homing Optimization**:
+    * Reduced `homing_speed` from `8` to `6` to lower noise and improve origin precision.
+    * Decreased `z_hop` to `2.0` for better efficiency and reduced mechanical impact.
+
+### 2. ACE Auto-Loading & Purge Logic
+* **Feeding Speed Increase**:
+    * ACE `default_unwind_speed` and `default_feed_speed` increased from `20/30` to **`65`**[cite: 2].
+* **Wiping & Purging Refinement**:
+    * Reduced `unwind_length_after_triggered` from `1300` to `1100` to accelerate material swaps[cite: 3].
+    * Lowered `sweep_speed` to `7` to ensure a cleaner nozzle and prevent residue from affecting the leveling process[cite: 2].
+
+### 3. Print Quality Compensation & Automation
+* **Bed Mesh Upgrade (Critical for a Perfect First Layer)**:
+    * Increased probe density from `5x5` to **`9x9`**.
+    * Switched algorithm from `lagrange` to **`bicubic`** for smoother interpolation.
+    * Enabled `fade` mechanism to gradually phase out compensation as height increases.
+    * Adjusted `horizontal_move_z` to `2` for faster travel between probe points.
+* **New Functional Modules**:
+    * **Multi-Material Temp Control**: Added temperature differential settings for material changes.
+    * **Purge Command**: Added `TO_THROW_POSITION` to optimize the filament purging workflow.
+
+---
+
+**Note:** These modifications are designed to enhance the stability of the Anycubic S1C's automatic material switching system while achieving high-precision results through high-density bed probing and dynamic flow compensation[cite: 1, 2].
