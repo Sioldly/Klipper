@@ -20,7 +20,7 @@
 
 ### 2. ACE自動進退料與洗料邏輯
 * **進退料速度提升**：
-    * ACE進退料`default_unwind_speed` 與 `default_feed_speed` 均從原本的 `20/30` 提升至 **`60`** [cite: 2, 11]。
+    * ACE進退料`default_unwind_speed` 與 `default_feed_speed` 均從原本的 `20/30` 提升至 **`65`** 。
 * **洗料邏輯微調**：
     * [cite_start]`unwind_length_after_triggered` 退料長度由 `1300` 縮減至 `1100` 提升速度。
     * [cite_start]擦除速度 `sweep_speed` 降低至 `7` 以確保噴頭清潔度避免殘留影響調平。
