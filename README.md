@@ -1,5 +1,3 @@
-# Klipper
-Anycupic S1 Combo print.cfg
 # Anycubic Kobra S1 Klipper Configuration Update
 這套配置我用了大半年了還行
 此專案紀錄了 Anycubic Kobra S1 (S1C) 打印機設定檔 `printer.cfg` 的優化歷程。主要針對自動換料效率、打印品質補償以及硬體驅動進行了深度調整。
