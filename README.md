@@ -40,4 +40,4 @@ This configuration has been battle-tested for over six months and has proven to 
 
 ---
 
-**Note:** These modifications are designed to enhance the stability of the Anycubic S1C's automatic material switching system while achieving high-precision results through high-density bed probing and dynamic flow compensation[cite: 1, 2].
+**Note:** These modifications are designed to enhance the stability of the Anycubic S1C's automatic material switching system while achieving high-precision results through high-density bed probing and dynamic flow compensation.
