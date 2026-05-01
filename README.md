@@ -1,13 +1,13 @@
 # Anycubic Kobra S1 Klipper Configuration Update
 
-This configuration has been battle-tested for over six months and has proven to be highly stable[cite: 1, 2]. This project documents the optimization process of the `printer.cfg` for the Anycubic Kobra S1 (S1C), primarily focusing on multi-material switching efficiency, print quality compensation, and hardware driver tuning[cite: 1, 2].
+This configuration has been battle-tested for over six months and has proven to be highly stable. This project documents the optimization process of the `printer.cfg` for the Anycubic Kobra S1 (S1C), primarily focusing on multi-material switching efficiency, print quality compensation, and hardware driver tuning.
 
 ## 🚀 Main Improvements
-* **Z-axis Noise**: Reduced excessive mechanical resonance during homing and movement[cite: 1, 2].
-* **Motor Current**: Addressed insufficient torque during high-speed printing[cite: 1, 2].
-* **First Layer Issues**: Improved bed adhesion and consistency for a perfect start[cite: 2].
-* **ACE Feeding Speed**: Significantly reduced material switching time[cite: 2].
-* **Leveling Efficiency**: Optimized the probing process for faster preparation and higher precision[cite: 2].
+* **Z-axis Noise**: Reduced excessive mechanical resonance during homing and movement.
+* **Motor Current**: Addressed insufficient torque during high-speed printing.
+* **First Layer Issues**: Improved bed adhesion and consistency for a perfect start.
+* **ACE Feeding Speed**: Significantly reduced material switching time.
+* **Leveling Efficiency**: Optimized the probing process for faster preparation and higher precision.
 
 ---
 
